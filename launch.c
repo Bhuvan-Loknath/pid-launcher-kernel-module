@@ -4,6 +4,10 @@
 #include <sys/wait.h>
 #include <fcntl.h>
 
+/*
+ * This function forks a new process.
+ * It executes the specified function from the executable path with the provided arguments.
+ */
 void launchProcess(int argc, char *argv[]) {
     if (argc < 2) {
         fprintf(stderr, "Usage: %s <executable_path> [args...]\n", argv[0]);
